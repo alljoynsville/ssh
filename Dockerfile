@@ -3,7 +3,7 @@ from ubuntu:artful
 MAINTAINER alljoynsville
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -yqq update \
- && DEBIAN_FRONTEND=noninteractive apt-get -yqq install openssh-server \
+ && DEBIAN_FRONTEND=noninteractive apt-get -yqq install openssh-server dropbear-bin \
  && mkdir /var/run/sshd \
  && useradd -m sshuser -s /bin/bash -u 1001 \
  && mkdir /home/sshuser/.ssh \
