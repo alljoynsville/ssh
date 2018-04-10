@@ -12,4 +12,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -yqq update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+EXPOSE 22/tcp
+
 CMD ["/usr/sbin/sshd", "-D"]
