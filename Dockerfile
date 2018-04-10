@@ -3,7 +3,7 @@ from ubuntu:artful
 MAINTAINER alljoynsville
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -yqq update \
- && DEBIAN_FRONTEND=noninteractive apt-get -yqq install openssh-server dropbear-bin python-pip \
+ && DEBIAN_FRONTEND=noninteractive apt-get -yqq install openssh-server dropbear-bin python-pip curl \
  && pip install paho-mqtt requests \
  && mkdir /var/run/sshd \
  && useradd -m sshuser -s /bin/bash -u 1001 \
